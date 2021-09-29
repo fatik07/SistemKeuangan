@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.images{
+  background-size: cover;
+  width: 50%;
+  height: 50%;
+}
+
+.img {
+  background-color: #000;
+}

@@ -12,5 +12,6 @@
   href="{{ asset('stisla-master/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css') }}">
 
 <!-- Template CSS -->
+<link rel="stylesheet" href="{{ asset('stisla-master/assets/css/custom.css') }}">
 <link rel="stylesheet" href="{{ asset('stisla-master/assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('stisla-master/assets/css/components.css') }}">
