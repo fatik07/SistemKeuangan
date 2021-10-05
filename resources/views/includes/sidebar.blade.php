@@ -33,7 +33,7 @@
         <span>Data Master</span></a>
       <ul class="dropdown-menu">
         <li><a class="nav-link" href="/data-guru">Data Guru</a></li>
-        <li><a class="nav-link" href="#">Data Kelas</a></li>
+        <li><a class="nav-link" href="/data-siswa">Data Kelas</a></li>
         <li><a class="nav-link" href="#">Data Siswa</a></li>
         <li><a class="nav-link" href="#">Jenis Transaksi</a></li>
         <li><a class="nav-link" href="#">Tanggal Merah</a></li>
