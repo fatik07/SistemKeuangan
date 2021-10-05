@@ -26,6 +26,10 @@ Route::get('/data-guru', function () {
     return view('pages.data-master.guru');
 });
 
+Route::get('/data-siswa', function () {
+    return view('pages.data-master.siswa');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
