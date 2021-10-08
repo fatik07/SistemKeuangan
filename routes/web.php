@@ -26,8 +26,20 @@ Route::get('/data-guru', function () {
     return view('pages.data-master.guru');
 });
 
+Route::get('/data-kelas', function () {
+    return view('pages.data-master.kelas');
+});
+
 Route::get('/data-siswa', function () {
     return view('pages.data-master.siswa');
+});
+
+Route::get('/jenis-transaksi', function () {
+    return view('pages.data-master.jenis-transaksi');
+});
+
+Route::get('/tanggal-merah', function () {
+    return view('pages.data-master.tanggal-merah');
 });
 
 Auth::routes();
