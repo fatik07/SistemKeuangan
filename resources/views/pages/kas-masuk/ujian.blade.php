@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
   <div class="row justify-content-between">
-    <p style="font-size: 28px;color:#000" class="mt-4">Data Kelas</p>
+    <p style="font-size: 28px;color:#000" class="mt-4">Data Pembayaran Uang Ujian</p>
     <button type="button" class="btn btn-secondary btn-sm text-dark button-custom">Tambah Data</button>
   </div>
 
@@ -21,51 +21,51 @@
         <thead>
           <tr>
             <th scope="col">No</th>
-            <th scope="col">Kelas</th>
-            <th scope="col">Wali Kelas</th>
-            <th scope="col">Keterangan</th>
+            <th scope="col">Nama Siswa</th>
+            <th scope="col">NIS</th>
+            <th scope="col">Jenis Kelamin</th>
             <th scope="col">Aksi</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>TI 2019 A</td>
-            <td>Bu Anita</td>
-            <td>isi keternagan</td>
+            <td>Daniansyah</td>
+            <td>19051204043</td>
+            <td>Laki-Laki</td>
             <td>
               <a href="#" class="badge badge-warning">Detail</a>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
           <tr>
             <th scope="row">1</th>
-            <td>TI 2019 A</td>
-            <td>Bu Anita</td>
-            <td>isi keternagan</td>
+            <td>Daniansyah</td>
+            <td>19051204043</td>
+            <td>Laki-Laki</td>
             <td>
               <a href="#" class="badge badge-warning">Detail</a>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
           <tr>
             <th scope="row">1</th>
-            <td>TI 2019 A</td>
-            <td>Bu Anita</td>
-            <td>isi keternagan</td>
+            <td>Daniansyah</td>
+            <td>19051204043</td>
+            <td>Laki-Laki</td>
             <td>
               <a href="#" class="badge badge-warning">Detail</a>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
           <tr>
             <th scope="row">1</th>
-            <td>TI 2019 A</td>
-            <td>Bu Anita</td>
-            <td>isi keternagan</td>
+            <td>Daniansyah</td>
+            <td>19051204043</td>
+            <td>Laki-Laki</td>
             <td>
               <a href="#" class="badge badge-warning">Detail</a>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
         </tbody>

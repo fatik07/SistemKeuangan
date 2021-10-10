@@ -32,7 +32,7 @@
             <td>01-26-2021</td>
             <td>Libur hari raya idul fitri</td>
             <td>
-              <div class="badge badge-danger">Hapus</div>
+              <a href="#" class="badge badge-danger">Hapus</a>
             </td>
           </tr>
           <tr>
@@ -40,7 +40,7 @@
             <td>01-26-2021</td>
             <td>Libur hari raya idul fitri</td>
             <td>
-              <div class="badge badge-danger">Hapus</div>
+              <a href="#" class="badge badge-danger">Hapus</a>
             </td>
           </tr>
         </tbody>

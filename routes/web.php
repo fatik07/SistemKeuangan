@@ -42,6 +42,18 @@ Route::get('/tanggal-merah', function () {
     return view('pages.data-master.tanggal-merah');
 });
 
+Route::get('/pendaftaran', function () {
+    return view('pages.kas-masuk.pendaftaran');
+});
+
+Route::get('/uang-ujian', function () {
+    return view('pages.kas-masuk.ujian');
+});
+
+Route::get('/uang-spp', function () {
+    return view('pages.kas-masuk.spp');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

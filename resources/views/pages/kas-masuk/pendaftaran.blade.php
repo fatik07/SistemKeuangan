@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
-@section('title','Data Siswa')
+@section('title','Data Guru')
 
 @section('content')
 <div class="container">
   <div class="row justify-content-between">
-    <p style="font-size: 28px;color:#000" class="mt-4">Data Siswa</p>
+    <p style="font-size: 28px;color:#000" class="mt-4">Pendaftaran</p>
     <button type="button" class="btn btn-secondary btn-sm text-dark button-custom">Tambah Data</button>
   </div>
 
@@ -21,70 +21,65 @@
         <thead>
           <tr>
             <th scope="col">No</th>
-            <th scope="col">Nama Siswa</th>
+            <th scope="col">Nama Pendaftar</th>
             <th scope="col">NIS</th>
             <th scope="col">Jenis Kelamin</th>
             <th scope="col">Wali</th>
             <th scope="col">ALamat</th>
-            <th scope="col">Status</th>
             <th scope="col">Aksi</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Rico Salahudin</td>
+            <td>Daniansyah</td>
             <td>19051204043</td>
             <td>Laki-Laki</td>
-            <td>Si Bambang</td>
-            <td>Surabaya</td>
+            <td>Pak Bambang</td>
+            <td>Sidoarjo</td>
             <td>
-              <div class="badge badge-success">Aktif</div>
-            </td>
-            <td>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-primary">Ubah</a>
+              <a href="#" class="badge badge-danger">Hapus</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Rico Salahudin</td>
+            <th scope="row">1</th>
+            <td>Daniansyah</td>
             <td>19051204043</td>
             <td>Laki-Laki</td>
-            <td>Si Bambang</td>
-            <td>Surabaya</td>
+            <td>Pak Bambang</td>
+            <td>Sidoarjo</td>
             <td>
-              <div class="badge badge-danger">Nonaktifkan</div>
-            </td>
-            <td>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-primary">Ubah</a>
+              <a href="#" class="badge badge-danger">Hapus</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td>Rico Salahudin</td>
+            <th scope="row">1</th>
+            <td>Daniansyah</td>
             <td>19051204043</td>
             <td>Laki-Laki</td>
-            <td>Si Bambang</td>
-            <td>Surabaya</td>
+            <td>Pak Bambang</td>
+            <td>Sidoarjo</td>
             <td>
-              <div class="badge badge-success">Aktif</div>
-            </td>
-            <td>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-primary">Ubah</a>
+              <a href="#" class="badge badge-danger">Hapus</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
           <tr>
-            <th scope="row">4</th>
-            <td>Rico Salahudin</td>
+            <th scope="row">1</th>
+            <td>Daniansyah</td>
             <td>19051204043</td>
             <td>Laki-Laki</td>
-            <td>Si Bambang</td>
-            <td>Surabaya</td>
+            <td>Pak Bambang</td>
+            <td>Sidoarjo</td>
             <td>
-              <div class="badge badge-success">Aktif</div>
-            </td>
-            <td>
-              <a href="#" class="badge badge-primary">Edit</a>
+              <a href="#" class="badge badge-primary">Ubah</a>
+              <a href="#" class="badge badge-danger">Hapus</a>
+              <a href="#" class="badge badge-success">Bayar</a>
             </td>
           </tr>
         </tbody>

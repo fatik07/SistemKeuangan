@@ -44,7 +44,7 @@
               <div class="badge badge-success">Aktif</div>
             </td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
           <tr>
@@ -59,7 +59,7 @@
               <div class="badge badge-danger">Nonktifkan</div>
             </td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
           <tr>
@@ -74,7 +74,7 @@
               <div class="badge badge-success">Aktif</div>
             </td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
           <tr>
@@ -89,7 +89,7 @@
               <div class="badge badge-success">Aktif</div>
             </td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
         </tbody>

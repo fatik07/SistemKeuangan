@@ -34,7 +34,7 @@
             <td>pembayaran SPP</td>
             <td>233.000</td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
           <tr>
@@ -43,7 +43,7 @@
             <td>pembayaran SPP</td>
             <td>233.000</td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
           <tr>
@@ -52,7 +52,7 @@
             <td>pembayaran SPP</td>
             <td>233.000</td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
           <tr>
@@ -61,7 +61,7 @@
             <td>pembayaran SPP</td>
             <td>233.000</td>
             <td>
-              <div class="badge badge-primary">Edit</div>
+              <a href="#" class="badge badge-primary">Edit</a>
             </td>
           </tr>
         </tbody>

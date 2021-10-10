@@ -44,11 +44,9 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
         <span>Kas Masuk</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="#">Data Guru</a></li>
-        <li><a class="nav-link" href="#">Data Kelas</a></li>
-        <li><a class="nav-link" href="#">Data Siswa</a></li>
-        <li><a class="nav-link" href="#">Jenis Transaksi</a></li>
-        <li><a class="nav-link" href="#">Tanggal Merah</a></li>
+        <li><a class="nav-link" href="/pendaftaran">Pendaftaran</a></li>
+        <li><a class="nav-link" href="/uang-ujian">Uang Ujian</a></li>
+        <li><a class="nav-link" href="/uang-spp">Uang SPP</a></li>
       </ul>
     </li>
 
