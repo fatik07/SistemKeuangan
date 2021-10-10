@@ -54,16 +54,12 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
         <span>Kas Keluar</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="#">Data Guru</a></li>
-        <li><a class="nav-link" href="#">Data Kelas</a></li>
-        <li><a class="nav-link" href="#">Data Siswa</a></li>
-        <li><a class="nav-link" href="#">Jenis Transaksi</a></li>
-        <li><a class="nav-link" href="#">Tanggal Merah</a></li>
+        <li><a class="nav-link" href="/gaji">Pembayaran gaji</a></li>
       </ul>
     </li>
 
     <li>
-      <a class="nav-link" href="#"><i class="far fa-chart-bar"></i> <span>Pembayaran Gaji</span></a>
+      <a class="nav-link" href="/laporan"><i class="far fa-chart-bar"></i> <span>Laporan</span></a>
     </li>
 
   </ul>

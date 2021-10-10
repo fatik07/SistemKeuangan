@@ -22,6 +22,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+// data master
 Route::get('/data-guru', function () {
     return view('pages.data-master.guru');
 });
@@ -42,6 +43,7 @@ Route::get('/tanggal-merah', function () {
     return view('pages.data-master.tanggal-merah');
 });
 
+// kas masuk
 Route::get('/pendaftaran', function () {
     return view('pages.kas-masuk.pendaftaran');
 });
@@ -52,6 +54,16 @@ Route::get('/uang-ujian', function () {
 
 Route::get('/uang-spp', function () {
     return view('pages.kas-masuk.spp');
+});
+
+// kas keluar
+Route::get('/gaji', function () {
+    return view('pages.kas-keluar.gaji');
+});
+
+// laporan
+Route::get('/laporan', function () {
+    return view('pages.laporan');
 });
 
 Auth::routes();
