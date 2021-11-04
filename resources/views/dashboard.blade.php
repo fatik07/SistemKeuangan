@@ -8,57 +8,67 @@
   <div class="container">
     <div class="row">
 
-      <div class="card my-2 col-12 col-lg-3 col-md-6"
-        style="max-height: 100px;background-color: #202E31;border-radius:10px;">
-        <div class="row g-0">
-          <div class="mt-3 ml-4">
-            <img src="{{ asset('img/unesa-bw.png') }}" alt="">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card card-statistic-1 bg-dark " style="border-radius: 30px">
+          <div class="card-icon text-light">
+            <i class="far fa-user"></i>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Saldo Awal</h5>
-            <p class="card-text">Rp. 25.000.000</p>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4 class=" text-light">Saldo Awal</h4>
+            </div>
+            <div class="card-body text-light mt-2" style="font-size: 13px">
+              Rp 25.000.000
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
+        <div class="card card-statistic-1 bg-dark " style="border-radius: 30px">
+          <div class="card-icon text-light">
+            <i class="far fa-user"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4 class=" text-light">Saldo Awal</h4>
+            </div>
+            <div class="card-body text-light mt-2" style="font-size: 13px">
+              Rp 25.000.000
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
+        <div class="card card-statistic-1 bg-dark " style="border-radius: 30px">
+          <div class="card-icon text-light">
+            <i class="far fa-user"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4 class=" text-light">Saldo Awal</h4>
+            </div>
+            <div class="card-body text-light mt-2" style="font-size: 13px">
+              Rp 25.000.000
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
+        <div class="card card-statistic-1 bg-dark " style="border-radius: 30px">
+          <div class="card-icon text-light">
+            <i class="far fa-user"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4 class=" text-light">Saldo Awal</h4>
+            </div>
+            <div class="card-body text-light mt-2" style="font-size: 13px">
+              Rp 25.000.000
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card my-2 col-12 col-lg-3 col-md-6"
-        style="max-height: 100px;background-color: #202E31;border-radius:10px;">
-        <div class="row g-0">
-          <div class="mt-3 ml-4">
-            <img src="{{ asset('img/unesa-bw.png') }}" alt="">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Saldo Awal</h5>
-            <p class="card-text">Rp. 25.000.000</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card my-2 col-12 col-lg-3 col-md-6"
-        style="max-height: 100px;background-color: #202E31;border-radius:10px;">
-        <div class="row g-0">
-          <div class="mt-3 ml-4">
-            <img src="{{ asset('img/unesa-bw.png') }}" alt="">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Saldo Awal</h5>
-            <p class="card-text">Rp. 25.000.000</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card my-2 col-12 col-lg-3 col-md-6"
-        style="max-height: 100px;background-color: #202E31;border-radius:10px;">
-        <div class="row g-0">
-          <div class="mt-3 ml-4">
-            <img src="{{ asset('img/unesa-bw.png') }}" alt="">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Saldo Awal</h5>
-            <p class="card-text">Rp. 25.000.000</p>
-          </div>
-        </div>
-      </div>
 
     </div>
 
