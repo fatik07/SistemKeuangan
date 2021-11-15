@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
@@ -21,38 +24,47 @@ class UserController extends Controller
         return view('auth/login');
     }
 
-    public function login(Request $request){
-        $validator = Validator::make($request->all(),[
-            'email' => 'required',
-            'password' => 'required|min:8',
-        ],[
-			'email.required' => 'email harus di isi',
-			'password.required' => 'Password harus di isi',
-			'password.min' => 'Password minimal harus 8 karakter'
-		]);
+    public function login(Request $request)
+    {
+    //  dd("asdas");
+        // $this->validate($request,
+ 
+        //     ['email'=>'required'],
+ 
+        //     ['password'=>'required']
+            
+        // );
+        
+        $email = $request->input('email');
+        $pass = $request->input('password');        
 
-        if($validator->fails()){
-            return response()->json(['errors'=>$validator->errors()]);
-        }
-
-		if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return response()->json([
-                'success'=> ['Berhasil Login']
-            ]); 
-        }else{
-            $user = User::where('email',$request->email)->first();
-
-            if(!$user){
-                return response()->json([
-                    'errors'=> ['email'=>['email tidak terdaftar']]
-                ]);
-            }
-            if(!Hash::check($request->password, $user->password)){
-                return response()->json([
-                    'errors'=> ['password'=>['Password tidak terdaftar']]
-                ]);
-            }
-        }
+        // $users = DB::table('m_user')->where(['email'=> $email])->first();
+        $users = DB::table('m_user')->where('email', $email)->first();
+        // $users = DB::table('m_user')->get();
+        
+            if(count(array($email)) == 0){
+    
+                return "tidak ada email di db";
+    
+            } else
+            
+            // if($users->email == $email AND Hash::check($pass, $users->password) ){
+            //    return redirect('/dashboard');
+    
+            // } else {
+                    
+            //    return "salah boss";
+        
+            // }
+            if($users->email == $email && $users->password == $pass){
+                return redirect('/dashboard');
+        
+                } else {
+                    
+                return "salah bisss";
+        
+                }
+            dd($users);
     }
     /**
      * Show the form for creating a new resource.

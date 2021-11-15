@@ -16,7 +16,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/',[UserController::class, 'index']);
-Route::post('login', [UserController::class, 'login'])->name('login');
+Route::post('/login', [UserController::class, 'login'])->name('login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -66,6 +66,6 @@ Route::get('/laporan', function () {
     return view('pages.laporan');
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
