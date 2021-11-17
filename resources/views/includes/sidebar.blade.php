@@ -32,11 +32,11 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-database"></i>
         <span>Data Master</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="/data-guru">Data Guru</a></li>
-        <li><a class="nav-link" href="/data-kelas">Data Kelas</a></li>
-        <li><a class="nav-link" href="/data-siswa">Data Siswa</a></li>
-        <li><a class="nav-link" href="/jenis-transaksi">Jenis Transaksi</a></li>
-        <li><a class="nav-link" href="/tanggal-merah">Tanggal Merah</a></li>
+        <li><a class="nav-link" href="{{ route('indexGuru') }}">Data Guru</a></li>
+        {{-- <li><a class="nav-link" href="/data-kelas">Data Kelas</a></li> --}}
+        <li><a class="nav-link" href="{{ route('indexSiswa') }}">Data Siswa</a></li>
+        {{-- <li><a class="nav-link" href="/jenis-transaksi">Jenis Transaksi</a></li> --}}
+        {{-- <li><a class="nav-link" href="/tanggal-merah">Tanggal Merah</a></li> --}}
       </ul>
     </li>
 
@@ -44,9 +44,9 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
         <span>Kas Masuk</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="/pendaftaran">Pendaftaran</a></li>
-        <li><a class="nav-link" href="/uang-ujian">Uang Ujian</a></li>
-        <li><a class="nav-link" href="/uang-spp">Uang SPP</a></li>
+        <li><a class="nav-link" href="{{ route('indexPendaftaran') }}">Pendaftaran</a></li>
+        <li><a class="nav-link" href="{{ route('indexUjian') }}">Uang Ujian</a></li>
+        <li><a class="nav-link" href="{{route('indexSpp')}}">Uang SPP</a></li>
       </ul>
     </li>
 
@@ -54,7 +54,7 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
         <span>Kas Keluar</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="/gaji">Pembayaran gaji</a></li>
+        <li><a class="nav-link" href="{{ route('indexGaji') }}">Pembayaran gaji</a></li>
       </ul>
     </li>
 

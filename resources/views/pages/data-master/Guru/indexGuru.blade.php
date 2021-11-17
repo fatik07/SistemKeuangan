@@ -10,7 +10,7 @@
           <div class="card">
               <div class="card-header p-0">
                   <div class="col-md-6  col-lg-6 text-left col-12">
-                      <h5 class="text-blue">Data Masuk SPP</h5>
+                      <h5 class="text-blue">Data Guru</h5>
                   </div>
                   <div class="col-md-12 col-lg-6 d-flex col-12 justify-content-end">
                       <div class="card-header-action mx-1">
@@ -41,12 +41,12 @@
                       <table id="tabelBerita" class="table w-100 table-hover">
                           <thead>
                               <tr>
-                                  <th>ID</th>
+                                  <th>NIP</th>
                                   <th>Nama</th>
-                                  <th>NISN</th>
-                                  <th>Nominal</th>
-                                  <th>Keterangan</th>
-                                  <th>Tanggal</th>
+                                  <th>Jabatan</th>
+                                  <th>Jenis Kelamin</th>
+                                  {{-- <th>Keterangan</th> --}}
+                                  <th>Tanggal Lahir</th>
                                   <th>Lihat/Edit</th>
                                   <th>Delete</th>
                               </tr>
@@ -55,12 +55,16 @@
                               {{-- data table ajax --}}
                               @foreach ($sql as $list)
                               <tr style="font-size:12px;">
-                                <td>{{ $list->id }}</td>
-                                <td>{{ $list->nama_siswa }}</td>
-                                <td>{{ $list->nisn }}</td>
-                                <td>{{ $list->nominal }}</td>
-                                <td>{{ $list->keterangan }}</td>
-                                <td>{{ $list->tgl }}</td>
+                                <td>{{ $list->nip }}</td>
+                                <td>{{ $list->nama }}</td>
+                                <td>{{ $list->jabatan }}</td>
+                                @if ($list->jk == "L")
+                                <td>Laki Laki</td>
+                                @elseif($list->jk == "P")
+                                <td>Perempuan</td>
+                                @endif
+                                <td>{{ $list->tgl_lahir }}</td>
+                                {{-- <td>{{ $list->tgl }}</td> --}}
                                 <td><a href="" class="btn btn-sm btn-info"  style="font-size:10px;"><i class="fa fa-eye"> Detail</i></a></td>
                                 <td><a href="" class="btn btn-sm btn-danger"  style="font-size:10px;"><i class="fa fa-eye"> Hapus</i></a></td>
 

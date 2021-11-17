@@ -40,6 +40,10 @@ class UserController extends Controller
 
         // $users = DB::table('m_user')->where(['email'=> $email])->first();
         $users = DB::table('m_user')->where('email', $email)->first();
+        // dd('12345678'==$users->password );  
+        // $cek = Hash::check('$10$0WGbrZ0UcGE40q/rn3Pd0eRWIrrOGQ5qsuc.muZpaBHBkLlj4NjUG', $users->password);
+        // dd(Hash::check($request->password, $users->password));
+        // dd($cek);
         // $users = DB::table('m_user')->get();
         
             if(count(array($email)) == 0){
@@ -48,22 +52,23 @@ class UserController extends Controller
     
             } else
             
-            // if($users->email == $email AND Hash::check($pass, $users->password) ){
-            //    return redirect('/dashboard');
+            if( $pass == $users->password && $email == $users->email){
+               return redirect('/dashboard');
     
-            // } else {
+            } else {
                     
-            //    return "salah boss";
+               return "salah boss";
         
-            // }
-            if($users->email == $email && $users->password == $pass){
-                return redirect('/dashboard');
+            }
+            // if($users->email == $email && bcrypt($users->password) == $pass){
+            //     return redirect('/dashboard');
         
-                } else {
+            //     } else {
                     
-                return "salah bisss";
-        
-                }
+            //     return "salah bisss";
+            //     dd();
+            // //    dd(Hash::check($pass, $users->password));
+            //     }
             dd($users);
     }
     /**

@@ -43,7 +43,7 @@
                               <tr>
                                   <th>ID</th>
                                   <th>Nama</th>
-                                  <th>NISN</th>
+                                  <th>NIP</th>
                                   <th>Nominal</th>
                                   <th>Keterangan</th>
                                   <th>Tanggal</th>
@@ -56,8 +56,8 @@
                               @foreach ($sql as $list)
                               <tr style="font-size:12px;">
                                 <td>{{ $list->id }}</td>
-                                <td>{{ $list->nama_siswa }}</td>
-                                <td>{{ $list->nisn }}</td>
+                                <td>{{ $list->nama }}</td>
+                                <td>{{ $list->nip }}</td>
                                 <td>{{ $list->nominal }}</td>
                                 <td>{{ $list->keterangan }}</td>
                                 <td>{{ $list->tgl }}</td>
