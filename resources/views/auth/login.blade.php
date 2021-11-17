@@ -28,8 +28,8 @@
           <div class="p-4 m-3">
             <img src="{{ asset('stisla-master/assets/img/stisla-fill.svg') }}" alt="logo" width="80"
               class="shadow-light rounded-circle mb-5 mt-2">
-            <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Stisla</span></h4>
-            <p class="text-muted">Before you get started, you must login or register if you don't already have an
+            <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Siperan</span></h4>
+            <p class="text-muted">Silahkan Login dengan Akun Anda
               account.</p>
             <form method="POST" action="/login" class="needs-validation" novalidate="">
               @csrf
@@ -60,13 +60,13 @@
                 </button>
               </div>
 
-              <div class="mt-5 text-center">
+              {{-- <div class="mt-5 text-center">
                 Don't have an account? <a href="auth-register.html">Create new one</a>
-              </div>
+              </div> --}}
             </form>
 
             <div class="text-center mt-5 text-small">
-              Copyright &copy; Your Company. Made with 💙 by Stisla
+              Copyright &copy; Kelompok 9 Pemweb
             </div>
           </div>
         </div>

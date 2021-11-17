@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use DB;
 
 use Auth;
+use Yajra\DataTables\Facades\DataTables;
+// use Illuminate\Support\Facades\Auth;
+use Vinkla\Hashids\Facades\Hashids;
+use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class SiswaController extends Controller
 {
@@ -114,16 +119,16 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        //
-        $sql = DB::table("m_siswa")
-        ->select('*')
-        // ->having('feedback.created_at')
-        ->get();
+        // //
+        // $sql = DB::table("m_siswa")
+        // ->select('*')
+        // // ->having('feedback.created_at')
+        // ->get();
         // return view('product/detail', compact('data', 'image','feedback'));
         
         // dd($sql);
         // return view('pages/kas-masuk/spp', compact('sql'));
-        return view('pages/kas-masuk/spp/inputSpp', compact('sql'));
+        return view('pages/data-master/siswa/inputSiswa');
     }
 
     /**
@@ -135,30 +140,37 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         //
-        $siswa = $request->nisn;
-        $nominal = $request->nominal;
-        $keterangan = $keterangan->keterangan;
+        // $nisn = $request->nisn;
+        // $nominal = $request->nominal;
+        // $keterangan = $keterangan->keterangan;
 
-        DB::table('t_mutasi_kas')->insert(
-            [
-              'jenis_kas'=>"SPP",
-              'tgl'=>Carbon::now(),
-              'keterangan'=>$keterngan,
-              'created_by'=>'admin',
-              'created_at' => Carbon::now()
+        // DB::table('t_mutasi_kas')->insert(
+        //     [
+        //       'jenis_kas'=>"SPP",
+        //       'tgl'=>Carbon::now(),
+        //       'keterangan'=>$keterngan,
+        //       'created_by'=>'admin',
+        //       'created_at' => Carbon::now()
 
-            ]
-          );   
-        DB::table('t_mutasi_kas_detail')->insert(
+        //     ]
+        //   );   
+       $insert= DB::table('m_siswa')->insert(
             [
-              'id_siswa_nisn'=>$siswa,
-              'nominal'=>$nominal,
-              'keterangan'=>$keterngan,
+              'nisn'=>$request->nisn,
+              'nama_siswa'=>$request->nama,
+              'kelas'=>$request->kelas,
+              'absen'=>$request->absen,
+              'jk'=>$request->jk,
+              'alamat'=>$request->alamat,
+              'tgl_lahir'=>$request->tgl,
               'created_by'=>'admin',
               'created_at' => Carbon::now()
 
             ]
           );
+         
+              return redirect('master/Siswa')->with('toast_success','Berhasil Menambahkan berita');
+          
     }
 
     /**

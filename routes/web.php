@@ -50,13 +50,13 @@ Route::get('/kas/masuk/pendaftaran/save',[MasukPendaftaranController::class, 'st
 Route::get('master/Siswa', [SiswaController::class, 'index'])->name('indexSiswa');
 Route::get('getDataSiswa',[SiswaController::class, 'getDataSiswa'])->name('getDataSiswa');
 Route::get('master/Siswa/tambah',[SiswaController::class, 'create'])->name('tambahdataSiswa');
-Route::get('master/Siswa/save',[SiswaController::class, 'store'])->name('storeSiswa');
+Route::post('master/Siswa/save',[SiswaController::class, 'store'])->name('storeSiswa');
 
 // guru
 Route::get('master/Guru', [GuruController::class, 'index'])->name('indexGuru');
 Route::get('getDataGuru',[GuruController::class, 'getDataGuru'])->name('getDataGuru');
 Route::get('master/Guru/tambah',[GuruController::class, 'create'])->name('tambahdataGuru');
-Route::get('master/Guru/save',[GuruController::class, 'store'])->name('storeGuru');
+Route::post('master/Guru/save',[GuruController::class, 'store'])->name('storeGuru');
 
 // guru
 Route::get('keluar/Gaji', [GajiController::class, 'index'])->name('indexGaji');
