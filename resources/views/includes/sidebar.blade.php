@@ -24,7 +24,7 @@
     <a href="#">SP</a>
   </div>
   <ul class="sidebar-menu">
-    <li class="nav-item dropdown active">
+    <li class="nav-item {{ (request()->is('dashboard')) ? ' active' : '' }}">
       <a href="/dashboard" class="nav-link"><i class="fas fa-home"></i><span>Beranda</span></a>
     </li>
 
@@ -32,9 +32,13 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-database"></i>
         <span>Data Master</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="{{ route('indexGuru') }}">Data Guru</a></li>
+        <li class="nav-item {{ (request()->is('indexGuru')) ? ' active' : '' }}">
+          <a class="nav-link" href="{{ route('indexGuru') }}">Data Guru</a>
+        </li>
         {{-- <li><a class="nav-link" href="/data-kelas">Data Kelas</a></li> --}}
-        <li><a class="nav-link" href="{{ route('indexSiswa') }}">Data Siswa</a></li>
+        <li class="nav-item {{ (request()->is('indexSiswa')) ? ' active' : '' }}">
+          <a class="nav-link" href="{{ route('indexSiswa') }}">Data Siswa</a>
+        </li>
         {{-- <li><a class="nav-link" href="/jenis-transaksi">Jenis Transaksi</a></li> --}}
         {{-- <li><a class="nav-link" href="/tanggal-merah">Tanggal Merah</a></li> --}}
       </ul>
@@ -44,9 +48,15 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
         <span>Kas Masuk</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="{{ route('indexPendaftaran') }}">Pendaftaran</a></li>
-        <li><a class="nav-link" href="{{ route('indexUjian') }}">Uang Ujian</a></li>
-        <li><a class="nav-link" href="{{route('indexSpp')}}">Uang SPP</a></li>
+        <li class="nav-item {{ (request()->is('indexPendaftaran')) ? ' active' : '' }}">
+          <a class="nav-link" href="{{ route('indexPendaftaran') }}">Pendaftaran</a>
+        </li>
+        <li class="nav-item {{ (request()->is('indexUjian')) ? ' active' : '' }}">
+          <a class="nav-link" href="{{ route('indexUjian') }}">Uang Ujian</a>
+        </li>
+        <li class="nav-item {{ (request()->is('indexSpp')) ? ' active' : '' }}">
+          <a class="nav-link" href="{{route('indexSpp')}}">Uang SPP</a>
+        </li>
       </ul>
     </li>
 
@@ -54,11 +64,13 @@
       <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
         <span>Kas Keluar</span></a>
       <ul class="dropdown-menu">
-        <li><a class="nav-link" href="{{ route('indexGaji') }}">Pembayaran gaji</a></li>
+        <li class="nav-item {{ (request()->is('indexGaji')) ? ' active' : '' }}">
+          <a class="nav-link" href="{{ route('indexGaji') }}">Pembayaran gaji</a>
+        </li>
       </ul>
     </li>
 
-    <li>
+    <li class="nav-item {{ (request()->is('laporan')) ? ' active' : '' }}">
       <a class="nav-link" href="/laporan"><i class="far fa-chart-bar"></i> <span>Laporan</span></a>
     </li>
 

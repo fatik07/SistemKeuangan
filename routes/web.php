@@ -24,45 +24,45 @@ use App\Http\Controllers\GajiController;
 |
 */
 
-Route::get('/',[UserController::class, 'index']);
+Route::get('/', [UserController::class, 'index']);
 Route::post('login', [UserController::class, 'login']);
 
 // SPP
 Route::get('/kas/masuk/spp', [MasukSppController::class, 'index'])->name('indexSpp');
-Route::get('getDataSpp',[MasukSppController::class, 'getDataSpp'])->name('getDataSpp');
-Route::get('/kas/masuk/spp/tambah',[MasukSppController::class, 'create'])->name('tambahdataspp');
-Route::get('/kas/masuk/spp/save',[MasukSppController::class, 'store'])->name('storeSpp');
+Route::get('getDataSpp', [MasukSppController::class, 'getDataSpp'])->name('getDataSpp');
+Route::get('/kas/masuk/spp/tambah', [MasukSppController::class, 'create'])->name('tambahdataspp');
+Route::get('/kas/masuk/spp/save', [MasukSppController::class, 'store'])->name('storeSpp');
 
 
 // UJIAN
 Route::get('/kas/masuk/Ujian', [MasukUjianController::class, 'index'])->name('indexUjian');
-Route::get('getDataUjian',[MasukUjianController::class, 'getDataUjian'])->name('getDataUjian');
-Route::get('/kas/masuk/ujian/tambah',[MasukUjianController::class, 'create'])->name('tambahdataUjian');
-Route::get('/kas/masuk/ujian/save',[MasukUjianController::class, 'store'])->name('storeUjian');
+Route::get('getDataUjian', [MasukUjianController::class, 'getDataUjian'])->name('getDataUjian');
+Route::get('/kas/masuk/ujian/tambah', [MasukUjianController::class, 'create'])->name('tambahdataUjian');
+Route::get('/kas/masuk/ujian/save', [MasukUjianController::class, 'store'])->name('storeUjian');
 
 // pendaftaran
 Route::get('/kas/masuk/pendaftaran', [MasukpendaftaranController::class, 'index'])->name('indexPendaftaran');
-Route::get('getDataPendaftaran',[MasukPendaftaranController::class, 'getDataPendaftaran'])->name('getDataPendaftaran');
-Route::get('/kas/masuk/pendaftaran/tambah',[MasukPendaftaranController::class, 'create'])->name('tambahdataPendaftaran');
-Route::get('/kas/masuk/pendaftaran/save',[MasukPendaftaranController::class, 'store'])->name('storePendaftaran');
+Route::get('getDataPendaftaran', [MasukPendaftaranController::class, 'getDataPendaftaran'])->name('getDataPendaftaran');
+Route::get('/kas/masuk/pendaftaran/tambah', [MasukPendaftaranController::class, 'create'])->name('tambahdataPendaftaran');
+Route::get('/kas/masuk/pendaftaran/save', [MasukPendaftaranController::class, 'store'])->name('storePendaftaran');
 
 // siswa
-Route::get('master/Siswa', [SiswaController::class, 'index'])->name('indexSiswa');
-Route::get('getDataSiswa',[SiswaController::class, 'getDataSiswa'])->name('getDataSiswa');
-Route::get('master/Siswa/tambah',[SiswaController::class, 'create'])->name('tambahdataSiswa');
-Route::post('master/Siswa/save',[SiswaController::class, 'store'])->name('storeSiswa');
+Route::get('master/siswa', [SiswaController::class, 'index'])->name('indexSiswa');
+Route::get('getDataSiswa', [SiswaController::class, 'getDataSiswa'])->name('getDataSiswa');
+Route::get('master/siswa/tambah', [SiswaController::class, 'create'])->name('tambahdataSiswa');
+Route::post('master/siswa/save', [SiswaController::class, 'store'])->name('storeSiswa');
 
 // guru
-Route::get('master/Guru', [GuruController::class, 'index'])->name('indexGuru');
-Route::get('getDataGuru',[GuruController::class, 'getDataGuru'])->name('getDataGuru');
-Route::get('master/Guru/tambah',[GuruController::class, 'create'])->name('tambahdataGuru');
-Route::post('master/Guru/save',[GuruController::class, 'store'])->name('storeGuru');
+Route::get('master/guru', [GuruController::class, 'index'])->name('indexGuru');
+Route::get('getDataGuru', [GuruController::class, 'getDataGuru'])->name('getDataGuru');
+Route::get('master/guru/tambah', [GuruController::class, 'create'])->name('tambahdataGuru');
+Route::post('master/guru/save', [GuruController::class, 'store'])->name('storeGuru');
 
 // guru
 Route::get('keluar/Gaji', [GajiController::class, 'index'])->name('indexGaji');
-Route::get('getDataGaji',[GajiController::class, 'getDataGaji'])->name('getDataGaji');
-Route::get('keluar/Gaji/tambah',[GajiController::class, 'create'])->name('tambahdataGaji');
-Route::get('keluar/Gaji/save',[GajiController::class, 'store'])->name('storeGaji');
+Route::get('getDataGaji', [GajiController::class, 'getDataGaji'])->name('getDataGaji');
+Route::get('keluar/Gaji/tambah', [GajiController::class, 'create'])->name('tambahdataGaji');
+Route::get('keluar/Gaji/save', [GajiController::class, 'store'])->name('storeGaji');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

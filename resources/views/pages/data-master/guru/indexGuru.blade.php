@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Data SPP')
+@section('title','Data Guru')
 
 @section('content')
 <br>
@@ -14,7 +14,7 @@
                   </div>
                   <div class="col-md-12 col-lg-6 d-flex col-12 justify-content-end">
                       <div class="card-header-action mx-1">
-                          <a href="{{ route('tambahdataspp') }}" class="btn btn-primary">Tambah
+                          <a href="{{ route('tambahdataGuru') }}" class="btn btn-primary">Tambah
                               Data <i class="fas fa-plus"></i></a>
                       </div>
                   </div>

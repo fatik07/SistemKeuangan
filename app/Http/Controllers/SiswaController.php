@@ -23,20 +23,20 @@ class SiswaController extends Controller
     {
         //
         $sql = DB::table("m_siswa")
-        // ->join('t_mutasi_kas', 't_mutasi_kas.id','t_mutasi_kas_detail.t_mutasi_kas_id')
-        // ->join("m_siswa", 'm_siswa.nisn', 't_mutasi_kas_detail.m_siswa_nisn')
-        // ->where("t_mutasi_kas_detail.deleted_at", 'NULL')
-        // ->where("t_mutasi_kas.jenis_kas", 'ujian')
+            // ->join('t_mutasi_kas', 't_mutasi_kas.id','t_mutasi_kas_detail.t_mutasi_kas_id')
+            // ->join("m_siswa", 'm_siswa.nisn', 't_mutasi_kas_detail.m_siswa_nisn')
+            // ->where("t_mutasi_kas_detail.deleted_at", 'NULL')
+            // ->where("t_mutasi_kas.jenis_kas", 'ujian')
 
-        // ->where("t_mutasi_kas.tgl", $tglAwal)
-        // ->where("t_mutasi_kas.tgl", $tglAkhir)
-        // ->groupBy('feedback.id_feedback')
-        // ->select('t_mutasi_kas.tgl','t_mutasi_kas_detail.*','m_siswa.*')
-        ->orderBy('nisn', 'asc')
-        // ->having('feedback.created_at')
-        ->get();
+            // ->where("t_mutasi_kas.tgl", $tglAwal)
+            // ->where("t_mutasi_kas.tgl", $tglAkhir)
+            // ->groupBy('feedback.id_feedback')
+            // ->select('t_mutasi_kas.tgl','t_mutasi_kas_detail.*','m_siswa.*')
+            ->orderBy('nisn', 'asc')
+            // ->having('feedback.created_at')
+            ->get();
         // return view('product/detail', compact('data', 'image','feedback'));
-        
+
         // dd($sql);
         return view('pages/data-master/siswa/indexSiswa', compact('sql'));
     }
@@ -66,7 +66,7 @@ class SiswaController extends Controller
     //     // ->having('feedback.created_at')
     //     ->get();
     //     // return view('product/detail', compact('data', 'image','feedback'));
-        
+
     //     dd($sql);
     //     $results = DB::select($sql);
     //     $result = collect($results);
@@ -125,7 +125,7 @@ class SiswaController extends Controller
         // // ->having('feedback.created_at')
         // ->get();
         // return view('product/detail', compact('data', 'image','feedback'));
-        
+
         // dd($sql);
         // return view('pages/kas-masuk/spp', compact('sql'));
         return view('pages/data-master/siswa/inputSiswa');
@@ -154,23 +154,22 @@ class SiswaController extends Controller
 
         //     ]
         //   );   
-       $insert= DB::table('m_siswa')->insert(
+        $insert = DB::table('m_siswa')->insert(
             [
-              'nisn'=>$request->nisn,
-              'nama_siswa'=>$request->nama,
-              'kelas'=>$request->kelas,
-              'absen'=>$request->absen,
-              'jk'=>$request->jk,
-              'alamat'=>$request->alamat,
-              'tgl_lahir'=>$request->tgl,
-              'created_by'=>'admin',
-              'created_at' => Carbon::now()
+                'nisn' => $request->nisn,
+                'nama_siswa' => $request->nama,
+                'kelas' => $request->kelas,
+                'absen' => $request->absen,
+                'jk' => $request->jk,
+                'alamat' => $request->alamat,
+                'tgl_lahir' => $request->tgl,
+                'created_by' => 'admin',
+                'created_at' => Carbon::now()
 
             ]
-          );
-         
-              return redirect('master/Siswa')->with('toast_success','Berhasil Menambahkan berita');
-          
+        );
+
+        return redirect('master/siswa')->with('toast_success', 'Berhasil Menambahkan berita');
     }
 
     /**

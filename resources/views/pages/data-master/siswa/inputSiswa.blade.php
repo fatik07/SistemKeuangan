@@ -35,8 +35,8 @@
                                 <div class="form-group">
                                     <label for="kelas">Kelas</label>
                                     <select id="jk" class="form-control" name="jk">
-                                    <option value="L">Laki-Laki</option>
-                                    <option value="P">Perempuan</option>
+                                    <option value="laki-laki">Laki-Laki</option>
+                                    <option value="perempuan">Perempuan</option>
                                     </select>
                                 </div>
                             </div>

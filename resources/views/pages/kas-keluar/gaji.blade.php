@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Data Guru')
+@section('title','Data Penggajian')
 
 @section('content')
 <div class="container">

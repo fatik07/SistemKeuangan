@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Data SPP')
+@section('title','Data Penggajian')
 
 @section('content')
 <br>
@@ -10,7 +10,7 @@
           <div class="card">
               <div class="card-header p-0">
                   <div class="col-md-6  col-lg-6 text-left col-12">
-                      <h5 class="text-blue">Data Masuk SPP</h5>
+                      <h5 class="text-blue">Data Keluar Penggajian</h5>
                   </div>
                   <div class="col-md-12 col-lg-6 d-flex col-12 justify-content-end">
                       <div class="card-header-action mx-1">

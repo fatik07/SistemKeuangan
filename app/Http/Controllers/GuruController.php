@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Carbon\Carbon;
+
 
 use Auth;
 
@@ -18,20 +20,20 @@ class GuruController extends Controller
     {
         //
         $sql = DB::table("m_guru")
-        // ->join('t_mutasi_kas', 't_mutasi_kas.id','t_mutasi_kas_detail.t_mutasi_kas_id')
-        // ->join("m_siswa", 'm_siswa.nisn', 't_mutasi_kas_detail.m_siswa_nisn')
-        // ->where("t_mutasi_kas_detail.deleted_at", 'NULL')
-        // ->where("t_mutasi_kas.jenis_kas", 'ujian')
+            // ->join('t_mutasi_kas', 't_mutasi_kas.id','t_mutasi_kas_detail.t_mutasi_kas_id')
+            // ->join("m_siswa", 'm_siswa.nisn', 't_mutasi_kas_detail.m_siswa_nisn')
+            // ->where("t_mutasi_kas_detail.deleted_at", 'NULL')
+            // ->where("t_mutasi_kas.jenis_kas", 'ujian')
 
-        // ->where("t_mutasi_kas.tgl", $tglAwal)
-        // ->where("t_mutasi_kas.tgl", $tglAkhir)
-        // ->groupBy('feedback.id_feedback')
-        // ->select('t_mutasi_kas.tgl','t_mutasi_kas_detail.*','m_siswa.*')
-        ->orderBy('nip', 'ASC')
-        // ->having('feedback.created_at')
-        ->get();
+            // ->where("t_mutasi_kas.tgl", $tglAwal)
+            // ->where("t_mutasi_kas.tgl", $tglAkhir)
+            // ->groupBy('feedback.id_feedback')
+            // ->select('t_mutasi_kas.tgl','t_mutasi_kas_detail.*','m_siswa.*')
+            ->orderBy('nip', 'ASC')
+            // ->having('feedback.created_at')
+            ->get();
         // return view('product/detail', compact('data', 'image','feedback'));
-        
+
         // dd($sql);
         return view('pages/data-master/guru/indexGuru', compact('sql'));
     }
@@ -61,7 +63,7 @@ class GuruController extends Controller
     //     // ->having('feedback.created_at')
     //     ->get();
     //     // return view('product/detail', compact('data', 'image','feedback'));
-        
+
     //     dd($sql);
     //     $results = DB::select($sql);
     //     $result = collect($results);
@@ -115,15 +117,15 @@ class GuruController extends Controller
     public function create()
     {
         //
-        $sql = DB::table("m_siswa")
-        ->select('*')
-        // ->having('feedback.created_at')
-        ->get();
+        $sql = DB::table("m_guru")
+            ->select('*')
+            // ->having('feedback.created_at')
+            ->get();
         // return view('product/detail', compact('data', 'image','feedback'));
-        
+
         // dd($sql);
         // return view('pages/kas-masuk/spp', compact('sql'));
-        return view('pages/kas-masuk/spp/inputSpp', compact('sql'));
+        return view('pages/data-master/guru/inputGuru', compact('sql'));
     }
 
     /**
@@ -135,30 +137,21 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         //
-        $siswa = $request->nisn;
-        $nominal = $request->nominal;
-        $keterangan = $keterangan->keterangan;
-
-        DB::table('t_mutasi_kas')->insert(
+        $insert = DB::table('m_guru')->insert(
             [
-              'jenis_kas'=>"SPP",
-              'tgl'=>Carbon::now(),
-              'keterangan'=>$keterngan,
-              'created_by'=>'admin',
-              'created_at' => Carbon::now()
+                'nip' => $request->nip,
+                'nama' => $request->nama,
+                'jabatan' => $request->jabatan,
+                'jk' => $request->jk,
+                'alamat' => $request->alamat,
+                'tgl_lahir' => $request->tgl,
+                'created_by' => 'admin',
+                'created_at' => Carbon::now()
 
             ]
-          );   
-        DB::table('t_mutasi_kas_detail')->insert(
-            [
-              'id_siswa_nisn'=>$siswa,
-              'nominal'=>$nominal,
-              'keterangan'=>$keterngan,
-              'created_by'=>'admin',
-              'created_at' => Carbon::now()
+        );
 
-            ]
-          );
+        return redirect('master/guru')->with('toast_success', 'Berhasil Menambahkan berita');
     }
 
     /**
